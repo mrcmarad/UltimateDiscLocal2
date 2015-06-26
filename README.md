@@ -89,7 +89,22 @@ AGGIORNAMENTO
 Selezione personaggio avversario
 
 
+UPDATE 26/06/2015
 
+CODICE:
+	last shot  rif. GameManager timeUp()
+	aggiungere intelligenza
+	aggiustare punti 
+	controllare restart ritornando al menù (problema va troppo veloce)
+	modificare immagine lancio
+	controllata generale
+
+DOC:
+	casi d'uso
+	contratti
+	diagrammi di sequenza
+	modelli di dominio
+	diagramma dei package
 
 
 

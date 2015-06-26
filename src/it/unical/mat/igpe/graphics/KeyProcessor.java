@@ -46,7 +46,7 @@ class KeyProcessor extends javax.swing.Timer {
         addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
             	
-            	if(gameManager.getDisc().isAvailableForMyPlayer()==false){
+            	if(gameManager.getDisc().isAvailableForMyPlayer()==false && GameManager.isPause()==false){
 	              
             		if (keystate.get(KEY_UP)&&keystate.get(KEY_RIGHT)){
 	                	gameManager.getMyPlayer().setDirection(4);
@@ -88,7 +88,7 @@ class KeyProcessor extends javax.swing.Timer {
 	            		CenterGamePanel.myPlayerImage = CenterGamePanel.imageProvider.getMyPlayerDirection(Player.RIGHT);
 	            	}
             	}
-            	else if(gameManager.getDisc().isAvailableForMyPlayer()==true){
+            	else if(gameManager.getDisc().isAvailableForMyPlayer()==true && GameManager.isPause()==false){
  
             		CenterGamePanel.frisbeeImage = null;
             		CenterGamePanel.myPlayerImage = CenterGamePanel.imageProvider.getMyPlayerShot(14);

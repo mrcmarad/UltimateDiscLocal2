@@ -36,20 +36,25 @@ public class NorthGamePanel extends JPanel {
 					//System.out.println("NGP");
 	        		if(GameManager.isPause()==false){
 	        			if (gameManager.timeUp())
-	        				time = imageProvider.getTime(0);
+	        			{
+	        				if(CenterGamePanel.repainterThread.isStartRound())
+	        				{
+	        					time = imageProvider.getTime(0);
+	        				}
+	        			}
 	        			else
 	        				time = imageProvider.getTime(GameManager.getEndTime()-GameManager.getTime());
 	        			
-	        			repaint();
-	        			try
-	        			{
-	        				sleep(10 + new Random().nextInt(30));
+		        			repaint();
+		        			try
+		        			{
+		        				sleep(10 + new Random().nextInt(30));
+		        			}
+		        			catch (final InterruptedException e)
+		        			{
+		        				System.out.println("errore run RepainterThread");
+		        			}
 	        			}
-	        			catch (final InterruptedException e)
-	        			{
-	        				System.out.println("errore run RepainterThread");
-	        			}
-	        		}
 	        	}
 	        }
 	    }

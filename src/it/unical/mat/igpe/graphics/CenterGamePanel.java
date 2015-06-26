@@ -29,6 +29,9 @@ public class CenterGamePanel extends JPanel {
 			public boolean gameFinished = false;
 			public boolean end;
 			public int yDisc;
+			boolean startRound=false;
+			boolean updateDisc=true;
+			boolean lastShotForTimeUp = false;
 			
 			int potenzaTiro;
 			int absYdisc;
@@ -54,6 +57,9 @@ public class CenterGamePanel extends JPanel {
 				counterOfRounds=0;
 				gameFinished = false;
 				yDisc = 0;
+				startRound=false;
+				updateDisc=true;
+				lastShotForTimeUp = false;
 			}
 			
 			public void stopT()
@@ -68,23 +74,281 @@ public class CenterGamePanel extends JPanel {
 				counterOfRounds=0;
 				gameFinished = false;
 				yDisc = 0;
+				startRound=false;
+				updateDisc=false;
 			}
 
 			@Override
 	        public void run()
 	        {
-				gameManager.getDisc().setDirection(-18, 14);
-				while(true)
+				while(!isEnd())
 				{
-					repaint();
-					gameManager.update();
-					try {
-						sleep(10 + new Random().nextInt(30));
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
+					if(!isGameFinished())
+					{
+						if(GameManager.isPause()==false)
+						{
+							setStartRound(true);
+							while(gameManager.timeUp()==false && finishMatch==false)
+							{
+								if(GameManager.isPause()==false)
+								{
+									if(roundControllerStart)
+			        				{
+		        						// side MyPlayer
+		        						pointMyPlayerPosition0 = imageProvider.getPoints(playGroundCGP,0);
+		        						pointMyPlayerPosition1 = imageProvider.getPoints(playGroundCGP,1);
+		        						pointMyPlayerPosition2 = imageProvider.getPoints(playGroundCGP,2);
+		        						pointMyPlayerPosition3 = imageProvider.getPoints(playGroundCGP,3);
+		        						pointMyPlayerPosition4 = imageProvider.getPoints(playGroundCGP,4);
+		        						// side ComPlayer
+		        						pointComPlayerPosition0 = imageProvider.getPoints(playGroundCGP,0);
+		        						pointComPlayerPosition1 = imageProvider.getPoints(playGroundCGP,1);
+		        						pointComPlayerPosition2 = imageProvider.getPoints(playGroundCGP,2);
+		        						pointComPlayerPosition3 = imageProvider.getPoints(playGroundCGP,3);
+		        						pointComPlayerPosition4 = imageProvider.getPoints(playGroundCGP,4);
+		        						roundImage = imageProvider.getRound(counterOfRounds);
+		        						repaint();
+		        						try
+		        						{
+		        							sleep(1500);
+		        						}
+		        						catch (final InterruptedException e)
+		        						{
+		        							System.out.println("errore run RepainterThread");
+		        						}
+		        						roundControllerStart=false;
+		        						roundImage=null;
+		        						// side MyPlayer
+		        						pointMyPlayerPosition0 = null;
+		        						pointMyPlayerPosition1 = null;
+		        						pointMyPlayerPosition2 = null;
+		        						pointMyPlayerPosition3 = null;
+		        						pointMyPlayerPosition4 = null;
+		        						// side ComPlayer
+		        						pointComPlayerPosition0 = null;
+		        						pointComPlayerPosition1 = null;
+		        						pointComPlayerPosition2 = null;
+		        						pointComPlayerPosition3 = null;
+		        						pointComPlayerPosition4 = null;
+			        				}
+								
+									if(isStartGame())
+		        					{
+		        						if(end)
+		        							break;
+		        						System.out.println("start");
+		        						gameManager.getDisc().setDirection(-1,0.6);
+		        						setUpdateDisc(true);
+		        						gameManager.update();
+		        						startGame=false;
+		        					}
+									
+									endRound=false;
+									repaint();
+									gameManager.update();
+									try {
+										sleep(10 + new Random().nextInt(30));
+									} catch (InterruptedException e) {
+										// TODO Auto-generated catch block
+										e.printStackTrace();
+									}
+									
+		        					if(GameManager.isStop())
+		        					{
+		        						frisbeeImage=null;
+	//	        						System.out.println("punti: "+gameManager.getWorld().getCurrentPoints());
+	//	        						pointsImage = imageProvider.getPoints(gameManager.getWorld().getCurrentPoints());
+		        						int numberOfImageToActivate = getNumberOfImageToActivate();
+		        						scoreInfoImage = imageProvider.getScore();
+		        						myPlayerNumberScore = imageProvider.getNumberScore(GameManager.getWorld().getMyPlayerScore());
+		        						comPlayerNumberScore = imageProvider.getNumberScore(GameManager.getWorld().getComScore());
+		        						try
+		        						{
+		        							sleep(2000);
+		        						}
+		        						catch (final InterruptedException e)
+		        						{
+		        							System.out.println("errore run RepainterThread GameManager Stopped");
+		        						}
+		        						gameManager.getDisc().reset();
+		        						
+		        						scoreInfoImage = null;
+		        						myPlayerNumberScore = null;
+		        						comPlayerNumberScore = null;
+		        						deActivateImagePoints(numberOfImageToActivate);
+		        						pointsImage = null;
+		        						frisbeeImage=imageProvider.getFrisbee();
+		        						GameManager.setStop(false);
+		        						
+		        						if(myPlayerGoal==true){
+		        							GameManager.setComPlayerAbility(true);
+		        							gameManager.getDisc().setDirection(1, 0.6);
+		        							myPlayerGoal=false;
+		        						}
+		        						else if(comPlayerGoal==true){
+		        							gameManager.getDisc().setDirection(-1,0.6);
+		        							comPlayerGoal=false;
+		        						}
+		        					}
+									
+									//System.out.println("CGP");
+								}
+								setStartRound(false);
+							}
+							
+							 //caso pareggio
+		        			if(gameManager.timeUp()==true && endRound==false && GameManager.isPause()==false
+		        					&& (GameManager.getWorld().getMyPlayerScore()==GameManager.getWorld().getComScore()) )
+		        			{
+		        				
+		        				gameManager.getDisc().reset();
+		        				gameManager.getMyPlayer().reset();
+		        				gameManager.getComPlayer().reset();
+		        				gameManager.getDisc().setAvailableForMyPlayer(false);
+		        				gameManager.getDisc().setAvailableForComPlayer(false);
+		        				myPlayerImage = CenterGamePanel.imageProvider.getMyPlayerRightMotionLess();
+		        				comPlayerImage = CenterGamePanel.imageProvider.getComPlayerLeftMotionLess();
+		        				frisbeeImage=imageProvider.getFrisbee();
+		        				gameManager.update();
+	        					repaint();
+		        				lastShot = imageProvider.getLastShot();
+		        				try
+	        					{
+	        						sleep(1500);
+	        					}
+	        					catch (final InterruptedException e)
+	        					{
+	        						System.out.println("errore run RepainterThread");
+	        					}
+		        				lastShot = null;
+		        				gameManager.getDisc().setDirection(-1,0.6);
+		        			}
+		        			lastShotForTimeUp=true;
+		        			while(gameManager.timeUp()==true && endRound==false && GameManager.isPause()==false
+		        					&& (GameManager.getWorld().getMyPlayerScore()==GameManager.getWorld().getComScore()) )
+		        			{
+		        				GameManager.setEqualize(true);
+		        				
+		        				gameManager.update();
+	        					repaint();
+	        					if(GameManager.isStop())
+	        					{
+	        						frisbeeImage=null;
+//	        						System.out.println("punti: "+gameManager.getWorld().getCurrentPoints());
+//	        						pointsImage = imageProvider.getPoints(gameManager.getWorld().getCurrentPoints());
+	        						int numberOfImageToActivate = getNumberOfImageToActivate();
+	        						scoreInfoImage = imageProvider.getScore();
+	        						myPlayerNumberScore = imageProvider.getNumberScore(GameManager.getWorld().getMyPlayerScore());
+	        						comPlayerNumberScore = imageProvider.getNumberScore(GameManager.getWorld().getComScore());
+	        						try
+	        						{
+	        							sleep(2000);
+	        						}
+	        						catch (final InterruptedException e)
+	        						{
+	        							System.out.println("errore run RepainterThread GameManager Stopped");
+	        						}
+	        						gameManager.getDisc().reset();
+	        						
+	        						if(myPlayerGoal==true){
+	        							GameManager.setComPlayerAbility(true);
+	        							gameManager.getDisc().setDirection(10, 5);
+	        							myPlayerGoal=false;
+	        						}
+	        						else if(comPlayerGoal==true){
+	        							gameManager.getDisc().setDirection(-18, 14);
+	        							comPlayerGoal=false;
+	        						}
+	        						scoreInfoImage = null;
+	        						myPlayerNumberScore = null;
+	        						comPlayerNumberScore = null;
+	        						deActivateImagePoints(numberOfImageToActivate);
+	        						pointsImage = null;
+	        						frisbeeImage=imageProvider.getFrisbee();
+	        						GameManager.setStop(false);
+	        					}
+		        				try
+	        					{
+	        						sleep(10 + new Random().nextInt(30));
+	        					}
+	        					catch (final InterruptedException e)
+	        					{
+	        						System.out.println("errore run RepainterThread");
+	        					}
+		        			}
+							lastShotForTimeUp=false;
+							setUpdateDisc(false);
+							GameManager.setEqualize(false);
+		        			
+		        			if(gameManager.timeUp()==true && endRound==false && GameManager.isPause()==false){
+		        				
+		        				gameManager.update();
+		        				
+		        				if(GameManager.getWorld().getMyPlayerScore()>=GameManager.getWorld().getComScore())
+		        					GameManager.getWorld().setRoundMyPlayer(1);
+		        				else
+		        					GameManager.getWorld().setRoundComPlayer(1);
+		        				
+		        				roundResumeImage = imageProvider.getScoreRound(GameManager.getWorld().getRoundMyPlayer(), GameManager.getWorld().getRoundComPlayer());
+		        				repaint();
+		        				try
+		        				{
+		        					sleep(1500);
+		        				}
+		        				catch (final InterruptedException e)
+		        				{
+		        					System.out.println("errore run RepainterThread");
+		        				}
+		        				roundResumeImage=null;
+		        				repaint();
+		        				endRound=true;
+		        				roundControllerStart=true;
+		        				startGame=true;
+		        				counterOfRounds++;
+		        				
+		        				System.out.println("Round "+counterOfRounds+" MYplayer: "+GameManager.getWorld().getMyPlayerScore()+" ComPlayer: "+GameManager.getWorld().getComScore());
+		        				System.out.println("Round "+counterOfRounds+" MYplayerR: "+GameManager.getWorld().getRoundMyPlayer()+" ComPlayerR: "+GameManager.getWorld().getRoundComPlayer());
+		        				GameManager.getWorld().setMyPlayerScore(0);
+		        				GameManager.getWorld().setComScore(0);
+		        				
+		        				gameManager.getDisc().reset();
+		        				gameManager.getMyPlayer().reset();
+		        				gameManager.getComPlayer().reset();
+		        				gameManager.getDisc().setAvailableForMyPlayer(false);
+		        				gameManager.getDisc().setAvailableForComPlayer(false);
+		        				myPlayerImage = CenterGamePanel.imageProvider.getMyPlayerRightMotionLess();
+		        				comPlayerImage = CenterGamePanel.imageProvider.getComPlayerLeftMotionLess();
+		        				frisbeeImage=imageProvider.getFrisbee();
+		        				gameManager.update();
+	        					repaint();
+		        			}
+		        			
+		        			if((GameManager.getWorld().getRoundMyPlayer()==2 || GameManager.getWorld().getRoundComPlayer()==2 
+		        					|| (GameManager.getWorld().getRoundMyPlayer()+GameManager.getWorld().getRoundComPlayer())==3) && (GameManager.isPause()==false))
+		        			{
+		        				finishMatch=true;
+		        				counterOfRounds=0;
+		        				// image you win or game over!
+		        				if(GameManager.getWorld().getRoundMyPlayer()==2)
+		        					gameOverImage = imageProvider.getYouWin();
+		        				else
+		        					gameOverImage = imageProvider.getGameOver();
+		        				repaint();
+		        				try{
+		        					sleep(1000);
+		        				}catch(InterruptedException e){}
+		        				gameFinished=true;
+		        			}
+		        			else if(GameManager.isPause()==false)
+		        			{
+		        				gameManager.getDisc().setAvailableForMyPlayer(false);
+		        				gameManager.getDisc().setAvailableForComPlayer(false);
+		        				gameManager.restartRound();
+		        			}
+						}
 					}
 				}
+				
 //	        	while(!end)
 //		        {	//System.out.println("CGP");
 //	        		if(!gameFinished){
@@ -349,6 +613,46 @@ public class CenterGamePanel extends JPanel {
 //		        }
 	        }
 			
+			public boolean isLastShotForTimeUp() {
+				return lastShotForTimeUp;
+			}
+
+			public void setLastShotForTimeUp(boolean lastShotForTimeUp) {
+				this.lastShotForTimeUp = lastShotForTimeUp;
+			}
+
+			public synchronized boolean isStartGame() {
+				return startGame;
+			}
+
+			public synchronized boolean isUpdateDisc() {
+				return updateDisc;
+			}
+
+			public synchronized void setUpdateDisc(boolean updateDisc) {
+				this.updateDisc = updateDisc;
+			}
+
+			public synchronized boolean isStartRound() {
+				return startRound;
+			}
+
+			public synchronized void setStartRound(boolean startRound) {
+				this.startRound = startRound;
+			}
+
+			public synchronized boolean isEnd() {
+				return end;
+			}
+
+			public synchronized boolean isGameFinished() {
+				return gameFinished;
+			}
+
+			public synchronized boolean isFinishMatch() {
+				return finishMatch;
+			}
+
 			private void deActivateImagePoints(int numberOfImageToActivate) {
 				switch (numberOfImageToActivate) {
 				
@@ -432,7 +736,7 @@ public class CenterGamePanel extends JPanel {
 				return finishMatch;
 			}
 
-			public void setFinish(boolean finish) {
+			public void setFinishMatch(boolean finish) {
 				this.finishMatch = finish;
 			}
 
@@ -559,7 +863,7 @@ public class CenterGamePanel extends JPanel {
 			    final int y = e.getY();
 			    
 			    // window finish
-			    if (CenterGamePanel.repainterThread.gameFinished==true)
+			    if (CenterGamePanel.repainterThread.isGameFinished()==true)
 			    {
 					// restart
 			    	if(x>((int)(width*0.29)) && x<((int)(width*0.43)) && y>((int)(height*0.1)) && y<((int)(height*0.17)))
@@ -616,7 +920,7 @@ public class CenterGamePanel extends JPanel {
 			    final int y = e.getY();
 			    
 			    // window finish
-			    if (CenterGamePanel.repainterThread.gameFinished==true)
+			    if (CenterGamePanel.repainterThread.isGameFinished()==true)
 			    {
 					// restart
 			    	if(x>((int)(width*0.29)) && x<((int)(width*0.43)) && y>((int)(height*0.1)) && y<((int)(height*0.17)))
@@ -664,6 +968,7 @@ public class CenterGamePanel extends JPanel {
 				    	restartWindowPause = imageProvider.getRestartWindowPause();
 				    	repaint();
 				    	setImageMenu();
+				    	repainterThread.setFinishMatch(true);
 				    	MainFrame.reStartGame(myPlayerCGP,comPlayerCGP,playGroundCGP);
 				    	CenterGamePanel.repainterThread.gameFinished=false;
 				    	AudioProvider.musicPlay();
@@ -710,50 +1015,53 @@ public class CenterGamePanel extends JPanel {
 	            		}
 	            	}
 					
-					switch (e.getKeyCode())
+					if (GameManager.isPause()==false)
 					{
-					 case KeyEvent.VK_UP:
-						 					CenterGamePanel.myPlayerImage = CenterGamePanel.imageProvider.getMyPlayerRightMotionLess();
-						 					ImageProvider.numberOfSequenceMyPlayer=0;
-					 						gameManager.getMyPlayer().setDirection(-1);
-					 						break;
-
-					 case KeyEvent.VK_DOWN:
-						 					CenterGamePanel.myPlayerImage = CenterGamePanel.imageProvider.getMyPlayerRightMotionLess();
-						 					ImageProvider.numberOfSequenceMyPlayer=0;
-						 					gameManager.getMyPlayer().setDirection(-1);
-						 					break;
-
-					 case KeyEvent.VK_LEFT:
-						 					gameManager.getMyPlayer().setDirection(-1);
-						 					ImageProvider.numberOfSequenceMyPlayer=0;
-						 					CenterGamePanel.myPlayerImage = CenterGamePanel.imageProvider.getMyPlayerRightMotionLess();
-						 					break;
-
-					 case KeyEvent.VK_RIGHT:
-						 					CenterGamePanel.myPlayerImage = CenterGamePanel.imageProvider.getMyPlayerRightMotionLess();
-						 					ImageProvider.numberOfSequenceMyPlayer=0;
-						 					gameManager.getMyPlayer().setDirection(-1);
-						 					break;
-
-					 default:	
-						 	break;
-					 }
-
-					 if(e.getKeyCode()==KeyEvent.VK_SPACE && gameManager.getDisc().isAvailableForMyPlayer()==true){
-						 
-						 Shot s = new Shot();
-						 s.start();
-						 
-						 gameManager.getDisc().setPosition(gameManager.getMyPlayer().getX()+((int)(Player.getWithimage()))+1, gameManager.getMyPlayer().getY());
-						 gameManager.getDisc().setAvailableForMyPlayer(false);
-//						 gameManager.getDisc().setDirection(getxShoot()+Math.abs(getyShoot()), getyShoot());
-						 gameManager.getDisc().setDirection(1,getyShoot());
-						 Frisbee.setyDisc(Math.abs(yShoot));
-						 CenterGamePanel.xShoot=1;
-						 CenterGamePanel.yShoot=0;
-						 GameManager.setComPlayerAbility(true);
-					 }
+						switch (e.getKeyCode())
+						{
+						 case KeyEvent.VK_UP:
+							 					CenterGamePanel.myPlayerImage = CenterGamePanel.imageProvider.getMyPlayerRightMotionLess();
+							 					ImageProvider.numberOfSequenceMyPlayer=0;
+						 						gameManager.getMyPlayer().setDirection(-1);
+						 						break;
+	
+						 case KeyEvent.VK_DOWN:
+							 					CenterGamePanel.myPlayerImage = CenterGamePanel.imageProvider.getMyPlayerRightMotionLess();
+							 					ImageProvider.numberOfSequenceMyPlayer=0;
+							 					gameManager.getMyPlayer().setDirection(-1);
+							 					break;
+	
+						 case KeyEvent.VK_LEFT:
+							 					gameManager.getMyPlayer().setDirection(-1);
+							 					ImageProvider.numberOfSequenceMyPlayer=0;
+							 					CenterGamePanel.myPlayerImage = CenterGamePanel.imageProvider.getMyPlayerRightMotionLess();
+							 					break;
+	
+						 case KeyEvent.VK_RIGHT:
+							 					CenterGamePanel.myPlayerImage = CenterGamePanel.imageProvider.getMyPlayerRightMotionLess();
+							 					ImageProvider.numberOfSequenceMyPlayer=0;
+							 					gameManager.getMyPlayer().setDirection(-1);
+							 					break;
+	
+						 default:	
+							 	break;
+						 }
+	
+						 if(e.getKeyCode()==KeyEvent.VK_SPACE && gameManager.getDisc().isAvailableForMyPlayer()==true){
+							 
+							 Shot s = new Shot();
+							 s.start();
+							 
+							 gameManager.getDisc().setPosition(gameManager.getMyPlayer().getX()+((int)(Player.getWithimage()))+1, gameManager.getMyPlayer().getY());
+							 gameManager.getDisc().setAvailableForMyPlayer(false);
+	//						 gameManager.getDisc().setDirection(getxShoot()+Math.abs(getyShoot()), getyShoot());
+							 gameManager.getDisc().setDirection(1.5,getyShoot());
+							 Frisbee.setyDisc(Math.abs(yShoot));
+							 CenterGamePanel.xShoot=1;
+							 CenterGamePanel.yShoot=0;
+							 GameManager.setComPlayerAbility(true);
+						 }
+					}
 			 }
 
             @Override
@@ -884,7 +1192,7 @@ public class CenterGamePanel extends JPanel {
 		
 //		g.drawRect(gameManager.getComPlayer().getX(),gameManager.getComPlayer().getY(), (int)(Player.getWithimage()), (int)(Player.getHeightimage()));
 //		
-//		g.drawRect(gameManager.getMyPlayer().getX(),gameManager.getMyPlayer().getY() ,Player.getWithimage(),Player.getHeightimage());
+		g.drawRect((int)gameManager.getMyPlayer().getX(),(int)gameManager.getMyPlayer().getY() ,Player.getWithimage(),Player.getHeightimage());
 //
 //		g.drawRect(gameManager.getDisc().getX()+((int)(Disc.getWithimage()*0.25)),gameManager.getDisc().getY()+((int)(Disc.getHeightimage()*0.25)) ,(int)(Disc.getWithimage()*0.6), (int)(Disc.getHeightimage()*0.6));
 		
@@ -934,7 +1242,7 @@ public class CenterGamePanel extends JPanel {
 //		g.drawImage(shadow,(int) (gameManager.getComPlayer().getX()*(0.2)),(int) (gameManager.getComPlayer().getY()*(0.5)),this);		
 	
 		// window finish
-		if (CenterGamePanel.repainterThread.gameFinished==true)
+		if (CenterGamePanel.repainterThread.isGameFinished()==true)
 		{
 			gameOverImage = null;
 			g.drawImage(backGroundWindowFinish,(int)(width*0.25),0,this);

@@ -100,8 +100,11 @@ public class GameManager {
 		startTime=0;
 	}
 
-	public boolean timeUp()
+	public synchronized boolean timeUp()
 	{
+		if ( CenterGamePanel.repainterThread.isLastShotForTimeUp() )
+			return false;
+		
 		if(GameManager.isPause()==false){
 			currentTime = (System.currentTimeMillis())/1000;
 			if ((currentTime-startTime)>=endTime){
@@ -212,7 +215,7 @@ public class GameManager {
 	}
 
 
-	public static boolean isStop() {
+	public static synchronized boolean isStop() {
 		return stop;
 	}
 

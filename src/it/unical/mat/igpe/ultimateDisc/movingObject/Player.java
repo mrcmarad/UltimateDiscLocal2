@@ -25,7 +25,7 @@ public abstract class Player implements MovingObject {
 	protected int wallSouth;
 	static final int dimensionEnergyShot = 7;
 	private int energyShot;
-	private final static int withImage=146;
+	private final static int withImage=80;
 	private final static int heightImage=160;
 	private final static int speedPlayer = 17;
 	

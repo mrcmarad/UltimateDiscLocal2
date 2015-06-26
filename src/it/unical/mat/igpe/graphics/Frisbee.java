@@ -19,18 +19,29 @@ public class Frisbee extends Thread {
 	
 	public void run()
 	{
-		while(true)
+		while(!CenterGamePanel.repainterThread.isEnd())
 		{
-			if(yDisc==0)
-				yDisc=1;
-			
-			try {
-					sleep(yDisc);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			if(!CenterGamePanel.repainterThread.isGameFinished())
+			{
+				while(gameManager.timeUp()==false && CenterGamePanel.repainterThread.isFinishMatch()==false)
+				{
+					if(GameManager.isPause()==false && !GameManager.isStop())
+					{
+						if(yDisc==0)
+							yDisc=1;
+						
+						try {
+								sleep(2);
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						if (CenterGamePanel.repainterThread.isStartGame()==false)
+							gameManager.getDisc().update();
+						System.out.println("F");
+					}
+				}
 			}
-			gameManager.getDisc().update();
 		}
 //		while(!CenterGamePanel.repainterThread.end)
 //		{

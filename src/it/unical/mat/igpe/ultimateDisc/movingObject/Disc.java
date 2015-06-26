@@ -1,5 +1,7 @@
 package it.unical.mat.igpe.ultimateDisc.movingObject;
+import it.unical.mat.igpe.graphics.CenterGamePanel;
 import it.unical.mat.igpe.graphics.Screen;
+import it.unical.mat.igpe.ultimateDisc.GameManager;
 
 import java.awt.Rectangle;
 
@@ -86,7 +88,7 @@ public class Disc implements MovingObject  {
 
 	@Override
 	public void update() {
-		if(isAvailableForMyPlayer() == false && isAvailableForComPlayer()==false ){
+		if(isAvailableForMyPlayer() == false && isAvailableForComPlayer()==false && CenterGamePanel.repainterThread.isUpdateDisc()==true){
 			if (getX() <= 0 && deltaX < 0 || getX() >= this.widthComponent && deltaX > 0)
 	        { 
 	            deltaX = -deltaX;
