@@ -91,7 +91,7 @@ class KeyProcessor extends javax.swing.Timer {
             	else if(gameManager.getDisc().isAvailableForMyPlayer()==true && GameManager.isPause()==false){
  
             		CenterGamePanel.frisbeeImage = null;
-            		CenterGamePanel.myPlayerImage = CenterGamePanel.imageProvider.getMyPlayerShot(14);
+            		CenterGamePanel.myPlayerImage = CenterGamePanel.imageProvider.getMyPlayerShot(0);
             		
             		gameManager.getDisc().setDirection(1, 0);
 

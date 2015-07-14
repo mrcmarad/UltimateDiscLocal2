@@ -127,6 +127,8 @@ public class GameManager {
 	{
 		myPlayer.update();
 		world.update();
+//		if(comPlayerAbility)
+//			iaComPlayer.moveComPlayer(); 
 		checkCollision();
 //		if (disc!=null && myPlayer!=null && comPlayer!=null && iaComPlayer!=null && world!=null)
 //		{

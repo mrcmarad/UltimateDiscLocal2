@@ -32,7 +32,7 @@ public class Wall implements StaticObject {
 
 	@Override
 	public int getValuePoint(double y) {
-		
+
 		if (arrayBlock.size()==size)
 		{	
 			if (y<0){	y=0;	}

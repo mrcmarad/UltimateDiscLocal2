@@ -43,7 +43,7 @@ public class SouthGamePanel extends JPanel {
 	        {
 				while(!CenterGamePanel.repainterThread.end)
 				{
-					//System.out.println("SGP");
+//					System.out.println("SGP");
 					if(GameManager.getWorld().getRoundMyPlayer()==1)
 						frisbeeRound1 = imageProvider.getFrisbeeRound2();
 					if(GameManager.getWorld().getRoundComPlayer()==1)

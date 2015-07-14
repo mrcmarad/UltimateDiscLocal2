@@ -53,6 +53,10 @@ public class MainFrame extends JFrame {
 	
 	public MainFrame(GameManager gameManager,ImageProvider imageProvider)
 	{
+		//////////////////////////////////////////////////////////////////////
+		 AudioProvider.clickAudio();
+    	 AudioProvider.audioOff();
+    	//////////////////////////////////////////////////////////////////////
 		AudioProvider.musicMainMenu();
 		
 		this.imageProvider=imageProvider;
@@ -136,7 +140,7 @@ public class MainFrame extends JFrame {
 
 	public void goToSelectPlayerPanel()
 	{
-		selectPlayerPanel = new SelectPlayerPanel(this);
+		selectPlayerPanel = new SelectPlayerPanel(this,this.imageProvider);
 		this.switchTo(selectPlayerPanel);
 		AudioProvider.stopMusicMainMenu();
 		AudioProvider.musicChooser();

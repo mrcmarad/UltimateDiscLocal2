@@ -23,7 +23,8 @@ public class Frisbee extends Thread {
 		{
 			if(!CenterGamePanel.repainterThread.isGameFinished())
 			{
-				while(gameManager.timeUp()==false && CenterGamePanel.repainterThread.isFinishMatch()==false)
+				while(gameManager.timeUp()==false && CenterGamePanel.repainterThread.isFinishMatch()==false 
+						&& !CenterGamePanel.repainterThread.isEnd())
 				{
 					if(GameManager.isPause()==false && !GameManager.isStop())
 					{
@@ -38,7 +39,7 @@ public class Frisbee extends Thread {
 						}
 						if (CenterGamePanel.repainterThread.isStartGame()==false)
 							gameManager.getDisc().update();
-						System.out.println("F");
+						//System.out.println("F");
 					}
 				}
 			}

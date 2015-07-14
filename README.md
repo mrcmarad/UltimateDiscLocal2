@@ -92,11 +92,11 @@ Selezione personaggio avversario
 UPDATE 26/06/2015
 
 CODICE:
-	last shot  rif. GameManager timeUp()
-	aggiungere intelligenza
-	aggiustare punti 
-	controllare restart ritornando al menù (problema va troppo veloce)
-	modificare immagine lancio
+-ok last shot  rif. GameManager timeUp()
+-?	aggiungere intelligenza
+-ok	aggiustare punti 
+-ok	controllare restart ritornando al menù (problema va troppo veloce)
+-?	modificare immagine lancio
 	controllata generale
 
 DOC:

@@ -52,7 +52,7 @@ public class ImageProvider {
 	private  Image[] myPlayerUpLeft = new Image[4];
 	private  Image[] myPlayerDownRight = new Image[4];
 	private  Image[] myPlayerDownLeft = new Image[4];
-	private  Image[] myPlayerShot = new Image[4];
+	private  Image[] myPlayerShot = new Image[15];/////////////////////////////////////////////////////////
 	private  Image myPlayerRightMotionLess;
 	private  Image myPlayerLeftMotionLess;
 	
@@ -460,10 +460,26 @@ public class ImageProvider {
     	  comPlayerUpLeft[3] = tk.getImage(comPlayerUpLeftPath+"upLeft_13.png");
     	  
       	//shot image
+//    	  myPlayerShot[0] = tk.getImage(myPlayerShotPath+"shot_0001.png");
+//    	  myPlayerShot[1] = tk.getImage(myPlayerShotPath+"shot_0009.png");
+//    	  myPlayerShot[2] = tk.getImage(myPlayerShotPath+"shot_0017.png");
+//    	  myPlayerShot[3] = tk.getImage(myPlayerShotPath+"shot_0025.png");
     	  myPlayerShot[0] = tk.getImage(myPlayerShotPath+"shot_0001.png");
-    	  myPlayerShot[1] = tk.getImage(myPlayerShotPath+"shot_0009.png");
-    	  myPlayerShot[2] = tk.getImage(myPlayerShotPath+"shot_0017.png");
-    	  myPlayerShot[3] = tk.getImage(myPlayerShotPath+"shot_0025.png");
+    	  myPlayerShot[1] = tk.getImage(myPlayerShotPath+"shot_0003.png");
+    	  myPlayerShot[2] = tk.getImage(myPlayerShotPath+"shot_0005.png");
+    	  myPlayerShot[3] = tk.getImage(myPlayerShotPath+"shot_0007.png");
+    	  myPlayerShot[4] = tk.getImage(myPlayerShotPath+"shot_0009.png");
+    	  myPlayerShot[5] = tk.getImage(myPlayerShotPath+"shot_0011.png");
+    	  myPlayerShot[6] = tk.getImage(myPlayerShotPath+"shot_0013.png");
+    	  myPlayerShot[7] = tk.getImage(myPlayerShotPath+"shot_0015.png");
+    	  myPlayerShot[8] = tk.getImage(myPlayerShotPath+"shot_0017.png");
+    	  myPlayerShot[9] = tk.getImage(myPlayerShotPath+"shot_0019.png");
+    	  myPlayerShot[10] = tk.getImage(myPlayerShotPath+"shot_0021.png");
+    	  myPlayerShot[11] = tk.getImage(myPlayerShotPath+"shot_0023.png");
+    	  myPlayerShot[12] = tk.getImage(myPlayerShotPath+"shot_0025.png");
+    	  myPlayerShot[13] = tk.getImage(myPlayerShotPath+"shot_0027.png");
+    	  myPlayerShot[14] = tk.getImage(myPlayerShotPath+"shot_0029.png");
+    	  
     	  comPlayerShot[0] = tk.getImage(comPlayerShotPath+"shot_0001.png");
     	  comPlayerShot[1] = tk.getImage(comPlayerShotPath+"shot_0009.png");
     	  comPlayerShot[2] = tk.getImage(comPlayerShotPath+"shot_0017.png");
@@ -926,10 +942,26 @@ public class ImageProvider {
 	  	  comPlayerUpLeft[3] = tk.getImage(comPlayerUpLeftPath+"upLeft_13.png");
 	  	  
 	    	//shot image
-	  	  myPlayerShot[0] = tk.getImage(myPlayerShotPath+"shot_0001.png");
-	  	  myPlayerShot[1] = tk.getImage(myPlayerShotPath+"shot_0009.png");
-	  	  myPlayerShot[2] = tk.getImage(myPlayerShotPath+"shot_0017.png");
-	  	  myPlayerShot[3] = tk.getImage(myPlayerShotPath+"shot_0025.png");
+//	  	  myPlayerShot[0] = tk.getImage(myPlayerShotPath+"shot_0001.png");
+//	  	  myPlayerShot[1] = tk.getImage(myPlayerShotPath+"shot_0009.png");
+//	  	  myPlayerShot[2] = tk.getImage(myPlayerShotPath+"shot_0017.png");
+//	  	  myPlayerShot[3] = tk.getImage(myPlayerShotPath+"shot_0025.png");
+    	  myPlayerShot[0] = tk.getImage(myPlayerShotPath+"shot_0001.png");
+    	  myPlayerShot[1] = tk.getImage(myPlayerShotPath+"shot_0003.png");
+    	  myPlayerShot[2] = tk.getImage(myPlayerShotPath+"shot_0005.png");
+    	  myPlayerShot[3] = tk.getImage(myPlayerShotPath+"shot_0007.png");
+    	  myPlayerShot[4] = tk.getImage(myPlayerShotPath+"shot_0009.png");
+    	  myPlayerShot[5] = tk.getImage(myPlayerShotPath+"shot_0011.png");
+    	  myPlayerShot[6] = tk.getImage(myPlayerShotPath+"shot_0013.png");
+    	  myPlayerShot[7] = tk.getImage(myPlayerShotPath+"shot_0015.png");
+    	  myPlayerShot[8] = tk.getImage(myPlayerShotPath+"shot_0017.png");
+    	  myPlayerShot[9] = tk.getImage(myPlayerShotPath+"shot_0019.png");
+    	  myPlayerShot[10] = tk.getImage(myPlayerShotPath+"shot_0021.png");
+    	  myPlayerShot[11] = tk.getImage(myPlayerShotPath+"shot_0023.png");
+    	  myPlayerShot[12] = tk.getImage(myPlayerShotPath+"shot_0025.png");
+    	  myPlayerShot[13] = tk.getImage(myPlayerShotPath+"shot_0027.png");
+    	  myPlayerShot[14] = tk.getImage(myPlayerShotPath+"shot_0029.png");
+    	  
 	  	  comPlayerShot[0] = tk.getImage(comPlayerShotPath+"shot_0001.png");
 	  	  comPlayerShot[1] = tk.getImage(comPlayerShotPath+"shot_0009.png");
 	  	  comPlayerShot[2] = tk.getImage(comPlayerShotPath+"shot_0017.png");
@@ -1355,7 +1387,7 @@ public class ImageProvider {
 	}
 
 	public Image getMyPlayerShot(int index) {
-		if (index>3)
+		if (index>=15)
 			return myPlayerShot[0];
 		return myPlayerShot[index];
 	}

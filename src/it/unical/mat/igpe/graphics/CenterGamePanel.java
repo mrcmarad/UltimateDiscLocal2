@@ -83,6 +83,7 @@ public class CenterGamePanel extends JPanel {
 	        {
 				while(!isEnd())
 				{
+//					System.out.println("CGP");
 					if(!isGameFinished())
 					{
 						if(GameManager.isPause()==false)
@@ -224,8 +225,8 @@ public class CenterGamePanel extends JPanel {
 		        				gameManager.getDisc().setDirection(-1,0.6);
 		        			}
 		        			lastShotForTimeUp=true;
-		        			while(gameManager.timeUp()==true && endRound==false && GameManager.isPause()==false
-		        					&& (GameManager.getWorld().getMyPlayerScore()==GameManager.getWorld().getComScore()) )
+		        			while(endRound==false && GameManager.isPause()==false
+		        					&& (GameManager.getWorld().getMyPlayerScore()==GameManager.getWorld().getComScore()) && !isEnd())
 		        			{
 		        				GameManager.setEqualize(true);
 		        				
@@ -678,6 +679,8 @@ public class CenterGamePanel extends JPanel {
 
 			private int getNumberOfImageToActivate() {
 				int positionHit = GameManager.getWorld().getWallCom().getStrickenWall(getyDisc());
+//				System.out.println(getyDisc());
+//				System.out.println(positionHit);
 				if (CenterGamePanel.getRepainterThread().isMyPlayerGoal())
 				{
 					switch (positionHit) {
@@ -1190,9 +1193,9 @@ public class CenterGamePanel extends JPanel {
 //		
 //		g.drawLine((int)(width*0.69), 0, (int)(width*0.69), getHeight());
 		
-//		g.drawRect(gameManager.getComPlayer().getX(),gameManager.getComPlayer().getY(), (int)(Player.getWithimage()), (int)(Player.getHeightimage()));
+//		g.drawRect((int)gameManager.getComPlayer().getX(),(int)gameManager.getComPlayer().getY(), (int)(Player.getWithimage()), (int)(Player.getHeightimage()));
 //		
-		g.drawRect((int)gameManager.getMyPlayer().getX(),(int)gameManager.getMyPlayer().getY() ,Player.getWithimage(),Player.getHeightimage());
+//		g.drawRect((int)gameManager.getMyPlayer().getX(),(int)gameManager.getMyPlayer().getY() ,Player.getWithimage(),Player.getHeightimage());
 //
 //		g.drawRect(gameManager.getDisc().getX()+((int)(Disc.getWithimage()*0.25)),gameManager.getDisc().getY()+((int)(Disc.getHeightimage()*0.25)) ,(int)(Disc.getWithimage()*0.6), (int)(Disc.getHeightimage()*0.6));
 		

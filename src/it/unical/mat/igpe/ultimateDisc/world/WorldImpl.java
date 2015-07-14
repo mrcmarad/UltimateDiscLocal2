@@ -153,6 +153,8 @@ public class WorldImpl implements World {
 		else if (disc.isMyplayer()==true)
 		{
 			point = this.wallMyPlayer.getValuePoint(y);
+//			System.out.println("w: "+point);
+//			System.out.println("w: "+y);
 			this.currentPoints=point;
 			GameManager.setComPlayerAbility(false);
 			this.myPlayerScore+=point;

@@ -34,18 +34,18 @@ public class WorldManager {
 			String r = "";
 			String[] n = s.split(r);
 			
-			int size = (n.length-1);
+			int size = (n.length);
 			Wall wallPlayer = new Wall(size);
 			Wall wallCom = new Wall(size);
 			
 			Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 			double height = (screenSize.getHeight()*0.75)/5;
 			
-			for (int i = 1; i < n.length; i++) {
-//				System.out.println("height:"+height+" i:"+i+" ="+height*(i-1));
+			for (int i = 0; i < n.length; i++) {
 				Integer value = Integer.parseInt(n[i]);
+//				System.out.println("height:"+height+" i:"+i+" ="+height*(i)+" value:"+value);
 				SmallWall smallWall = new SmallWall(value);
-				smallWall.setY_position(height*(i-1));
+				smallWall.setY_position(height*(i));
 				wallPlayer.addSmallWall(smallWall);
 				wallCom.addSmallWall(smallWall);
 			}

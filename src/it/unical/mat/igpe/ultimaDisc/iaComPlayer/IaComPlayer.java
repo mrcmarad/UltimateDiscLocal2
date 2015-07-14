@@ -207,31 +207,36 @@ public class IaComPlayer {
 //    			int xPlayer = gameManager.getMyPlayer().getX();
 		int yPlayer = (int)gameManager.getMyPlayer().getY();
 		
+		// LA y VARIA TRA 0.1 E 0.5
+		
 		//EASY
+		// y impostata a 0.2 fissa
 		if(GameManager.getDifficultyLevel() == 0){
 			if(yPlayer>(startPositionPlayerY+10)){
-				randomY=0.3;
+				randomY=0.2;
 			}
 			else if (yPlayer<=(startPositionPlayerY+10)){
-				randomY=-0.3;
+				randomY=-0.2;
 			}
 		}
 		//MEDIUM
+		// y varia tra 0.1 e 0.4 presi random
 		else if(GameManager.getDifficultyLevel() == 1){
 			if(yPlayer>(startPositionPlayerY+10)){
-				randomY = 4+new Random().nextInt(6);
+				randomY = 0.1 + (0.4 - 0.1) * new Random().nextDouble();
 			}
 			else if (yPlayer<=(startPositionPlayerY+10)){
-				randomY = -10+new Random().nextInt(9);
+				randomY = - 0.1 + (0.4 - 0.1) * new Random().nextDouble();
 			}
 		}
 		//HARD
+		// y varia tra 0.3 e 0.5 presi random
 		else if(GameManager.getDifficultyLevel() == 2){
 			if(yPlayer>(startPositionPlayerY+10)){
-				randomY = -10+new Random().nextInt(9);
+				randomY = -0.3 + (0.51 - 0.3) * new Random().nextDouble();
 			}
 			else if (yPlayer<=(startPositionPlayerY+10)){
-				randomY = 4+new Random().nextInt(6);
+				randomY = 0.3 + (0.51 - 0.3) * new Random().nextDouble();
 			}
 		}
 		

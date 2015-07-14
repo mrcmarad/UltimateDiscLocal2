@@ -14,14 +14,14 @@ public class SelectPlayerPanel extends JPanel {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	private static ImageProvider imageProvider = new ImageProvider();
-	private static Image background = imageProvider.getSelectPlayerPanelBackground();
-	Image myPlayerSelected = imageProvider.getMyPlayerSelected();
-	Image comPlayerSelected = imageProvider.getComPlayerSelected();
-	Image players = imageProvider.getPlayersBarName();
-	Image done = imageProvider.getDone();
-	Image back = imageProvider.getBack();
-	Image selected = imageProvider.getSelectedMyPlayer();
+	private static ImageProvider imageProvider;
+	private static Image background;
+	Image myPlayerSelected;
+	Image comPlayerSelected;
+	Image players;
+	Image done;
+	Image back;
+	Image selected;
 	int select = 0;
 	int myPlayer = 0;
 	int comPlayer = 0;
@@ -30,8 +30,17 @@ public class SelectPlayerPanel extends JPanel {
     double width = screen.getWidth();
     double height = screen.getHeight()*0.75;
 	
-	public SelectPlayerPanel(final MainFrame mainFrame)
+	public SelectPlayerPanel(final MainFrame mainFrame,final ImageProvider ip)
 	{
+		imageProvider = ip;
+		background = imageProvider.getSelectPlayerPanelBackground();
+		myPlayerSelected = imageProvider.getMyPlayerSelected();
+		comPlayerSelected = imageProvider.getComPlayerSelected();
+		players = imageProvider.getPlayersBarName();
+		done = imageProvider.getDone();
+		back = imageProvider.getBack();
+		selected = imageProvider.getSelectedMyPlayer();
+		
 		this.addMouseListener(new MouseListener() {
 			
 			@Override
@@ -210,7 +219,6 @@ public class SelectPlayerPanel extends JPanel {
 	    g.drawImage(players, 0, 0, getWidth(),getHeight(),this);
 	    g.drawImage(done, 0, 0, getWidth(),getHeight(),this);
 	    g.drawImage(back, 0, 0, getWidth(),getHeight(),this);
-	    
 	    
 	}
 

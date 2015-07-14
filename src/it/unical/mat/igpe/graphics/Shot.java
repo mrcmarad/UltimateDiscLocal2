@@ -5,12 +5,12 @@ public class Shot extends Thread {
 	public void run()
 	{
 		int count = 0;
-		while(count < 4)
+		while(count < 15)
 		{
 			CenterGamePanel.myPlayerImage = CenterGamePanel.imageProvider.getMyPlayerShot(count);
 			count++;
 			try {
-				sleep(70);
+				sleep(25);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
