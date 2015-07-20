@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.8" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
+  realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" language="java" name="it.unical.mat.igpe.graphics.CenterGamePanel" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/graphics/CenterGamePanel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="1143" width="301" x="1470" y="927"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="it.unical.mat.igpe.graphics.Frisbee" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/graphics/Frisbee.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="140" x="2235" y="536"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="3" language="java" name="it.unical.mat.igpe.ultimateDisc.world.World" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/ultimateDisc/world/World.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="423" width="184" x="1505" y="3774"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="4" language="java" name="it.unical.mat.igpe.ultimateDisc.world.WorldImpl" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/ultimateDisc/world/WorldImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="657" width="184" x="468" y="927"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="it.unical.mat.igpe.graphics.AudioPanel" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/graphics/AudioPanel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="178" x="490" y="536"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="it.unical.mat.igpe.graphics.AudioProvider" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/graphics/AudioProvider.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="459" width="180" x="207" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="it.unical.mat.igpe.graphics.ChooseDifficultyPanel" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/graphics/ChooseDifficultyPanel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="191" x="41" y="536"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="it.unical.mat.igpe.graphics.EastGamePanel" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/graphics/EastGamePanel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="387" width="249" x="1811" y="927"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="it.unical.mat.igpe.graphics.GamePanel" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/graphics/GamePanel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="269" x="1470" y="536"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="it.unical.mat.igpe.graphics.KeyProcessor" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/graphics/KeyProcessor.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="261" width="259" x="2436" y="927"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="it.unical.mat.igpe.graphics.MainFrame" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/graphics/MainFrame.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="405" width="226" x="1246" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="it.unical.mat.igpe.graphics.MenuPanel" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/graphics/MenuPanel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="178" x="272" y="536"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="it.unical.mat.igpe.graphics.NorthGamePanel" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/graphics/NorthGamePanel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="333" width="254" x="2100" y="927"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="it.unical.mat.igpe.graphics.Screen" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/graphics/Screen.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="136" x="862" y="3774"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="it.unical.mat.igpe.graphics.SelectArenaPanel" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/graphics/SelectArenaPanel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="351" width="200" x="926" y="536"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="it.unical.mat.igpe.graphics.SelectPlayerPanel" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/graphics/SelectPlayerPanel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="351" width="243" x="1166" y="536"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="it.unical.mat.igpe.graphics.SettingPanel" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/graphics/SettingPanel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="178" x="708" y="536"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="it.unical.mat.igpe.graphics.Shot" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/graphics/Shot.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="119" x="593" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="it.unical.mat.igpe.graphics.ShotComPlayer" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/graphics/ShotComPlayer.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="119" x="919" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="it.unical.mat.igpe.graphics.SouthGamePanel" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/graphics/SouthGamePanel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="315" width="256" x="881" y="927"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="it.unical.mat.igpe.graphics.WestGamePanel" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/graphics/WestGamePanel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="405" width="253" x="1177" y="927"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="it.unical.mat.igpe.ultimaDisc.iaComPlayer.IaComPlayer" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/ultimaDisc/iaComPlayer/IaComPlayer.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="185" x="1736" y="2987"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="it.unical.mat.igpe.ultimateDisc.GameManager" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/ultimateDisc/GameManager.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="783" width="190" x="1723" y="2110"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="it.unical.mat.igpe.ultimateDisc.movingObject.ComPlayer" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/ultimateDisc/movingObject/ComPlayer.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="189" width="197" x="1268" y="2987"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="it.unical.mat.igpe.ultimateDisc.movingObject.Disc" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/ultimateDisc/movingObject/Disc.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="747" width="221" x="986" y="2987"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="26" language="java" name="it.unical.mat.igpe.ultimateDisc.movingObject.MovingObject" 
+    project="UltimateDisc" file="/UltimateDisc/src/it/unical/mat/igpe/ultimateDisc/movingObject/MovingObject.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="197" x="2183" y="3774"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="27" language="java" name="it.unical.mat.igpe.ultimateDisc.movingObject.MyPlayer" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/ultimateDisc/movingObject/MyPlayer.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="81" width="201" x="1961" y="2987"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="it.unical.mat.igpe.ultimateDisc.movingObject.Player" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/ultimateDisc/movingObject/Player.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="837" width="197" x="1961" y="2110"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="it.unical.mat.igpe.ultimateDisc.staticObject.SmallWall" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/ultimateDisc/staticObject/SmallWall.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="225" width="189" x="253" y="2987"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="30" language="java" name="it.unical.mat.igpe.ultimateDisc.staticObject.StaticObject" 
+    project="UltimateDisc" file="/UltimateDisc/src/it/unical/mat/igpe/ultimateDisc/staticObject/StaticObject.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="189" x="463" y="3774"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="31" language="java" name="it.unical.mat.igpe.ultimateDisc.staticObject.Wall" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/ultimateDisc/staticObject/Wall.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="189" x="463" y="2110"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="32" language="java" name="it.unical.mat.igpe.ultimateDisc.world.WorldManager" project="UltimateDisc" 
+    file="/UltimateDisc/src/it/unical/mat/igpe/ultimateDisc/world/WorldManager.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="170" x="1505" y="2987"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="33">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="34" name="mainFrame"/>      
+      <multiplicity id="35" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="36">    
+    <bendpoint x="871" y="2110"/>    
+    <bendpoint x="871" y="2987"/>    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="37" name="screen"/>      
+      <multiplicity id="38" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="39">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="26"/>  
+  </realization>  
+  <association id="40">    
+    <bendpoint x="829" y="927"/>    
+    <bendpoint x="829" y="2110"/>    
+    <bendpoint x="829" y="2987"/>    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="41" name="screen"/>      
+      <multiplicity id="42" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="43">    
+    <bendpoint x="766" y="927"/>    
+    <bendpoint x="766" y="2110"/>    
+    <bendpoint x="766" y="2987"/>    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="44" name="screen"/>      
+      <multiplicity id="45" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="46">    
+    <bendpoint x="472" y="2987"/>    
+    <end type="SOURCE" refId="31"/>    
+    <end type="TARGET" refId="30"/>  
+  </realization>  
+  <association id="47">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="48" name="wallMyPlayer"/>      
+      <multiplicity id="49" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="50">    
+    <bendpoint x="1439" y="536"/>    
+    <bendpoint x="850" y="927"/>    
+    <bendpoint x="850" y="2110"/>    
+    <bendpoint x="850" y="2987"/>    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="51" name="screen"/>      
+      <multiplicity id="52" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="53">    
+    <bendpoint x="892" y="2110"/>    
+    <bendpoint x="892" y="2987"/>    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="54" name="screen"/>      
+      <multiplicity id="55" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="56">    
+    <bendpoint x="913" y="2110"/>    
+    <bendpoint x="913" y="2987"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="57" name="screen"/>      
+      <multiplicity id="58" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="59">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="60" name="worldManager"/>      
+      <multiplicity id="61" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="62">    
+    <bendpoint x="1705" y="2987"/>    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="63" name="world"/>      
+      <multiplicity id="64" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="65">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="66" name="disc"/>      
+      <multiplicity id="67" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="68">    
+    <end type="SOURCE" refId="24" navigable="false">      
+      <attribute id="69" name="screen"/>      
+      <multiplicity id="70" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="71">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="72" name="southGamePanel"/>      
+      <multiplicity id="73" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="74">    
+    <bendpoint x="703" y="927"/>    
+    <bendpoint x="703" y="2110"/>    
+    <bendpoint x="703" y="2987"/>    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="75" name="screen"/>      
+      <multiplicity id="76" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="77">    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="78" name="gameManager"/>      
+      <multiplicity id="79" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="80">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="81" name="gameManager"/>      
+      <multiplicity id="82" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="83">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="84" name="frisbee"/>      
+      <multiplicity id="85" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="86">    
+    <bendpoint x="2384" y="927"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="87" name="gameManager"/>      
+      <multiplicity id="88" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="89">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="90" name="audioPanel"/>      
+      <multiplicity id="91" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="92">    
+    <bendpoint x="1237" y="2987"/>    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="93" name="screen"/>      
+      <multiplicity id="94" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="95">    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="96" name="gameManager"/>      
+      <multiplicity id="97" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="98">    
+    <end type="SOURCE" refId="32" navigable="false">      
+      <attribute id="99" name="world"/>      
+      <multiplicity id="100" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="101">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="102" name="arrayBlock"/>      
+      <multiplicity id="103" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="104">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="105" name="centerGamePanel"/>      
+      <multiplicity id="106" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="107">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="108" name="comPlayer"/>      
+      <multiplicity id="109" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="24" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="110">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="111" name="gameManager"/>      
+      <multiplicity id="112" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="113">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="114" name="menuPanel"/>      
+      <multiplicity id="115" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="116">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="30"/>  
+  </realization>  
+  <association id="117">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="118" name="gameManager"/>      
+      <multiplicity id="119" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="120">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="121" name="settingPanel"/>      
+      <multiplicity id="122" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="123">    
+    <bendpoint x="787" y="927"/>    
+    <bendpoint x="787" y="2110"/>    
+    <bendpoint x="787" y="2987"/>    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="124" name="screen"/>      
+      <multiplicity id="125" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="126">    
+    <bendpoint x="808" y="2110"/>    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="127" name="disc"/>      
+      <multiplicity id="128" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="129">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="130" name="selectPlayerPanel"/>      
+      <multiplicity id="131" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="132">    
+    <bendpoint x="2405" y="536"/>    
+    <bendpoint x="2405" y="927"/>    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="133" name="gameManager"/>      
+      <multiplicity id="134" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="135">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="136" name="screen"/>      
+      <multiplicity id="137" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="138">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="139" name="chooseDifficultyPanel"/>      
+      <multiplicity id="140" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="141">    
+    <bendpoint x="934" y="2110"/>    
+    <bendpoint x="934" y="2987"/>    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="142" name="screen"/>      
+      <multiplicity id="143" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="144">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="145" name="myPlayer"/>      
+      <multiplicity id="146" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="27" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="147">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="148" name="wallCom"/>      
+      <multiplicity id="149" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="150">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="151" name="gameManager"/>      
+      <multiplicity id="152" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="153">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="154" name="selectArenaPanel"/>      
+      <multiplicity id="155" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="156">    
+    <bendpoint x="745" y="927"/>    
+    <bendpoint x="745" y="2110"/>    
+    <bendpoint x="745" y="2987"/>    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="157" name="screen"/>      
+      <multiplicity id="158" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="159">    
+    <bendpoint x="682" y="927"/>    
+    <bendpoint x="682" y="2110"/>    
+    <bendpoint x="682" y="2987"/>    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="160" name="screen"/>      
+      <multiplicity id="161" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="162">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="163" name="instance"/>      
+      <multiplicity id="164" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="165">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="166" name="eastGamePanel"/>      
+      <multiplicity id="167" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="168">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="169" name="gamePanel"/>      
+      <multiplicity id="170" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="171">    
+    <bendpoint x="724" y="2110"/>    
+    <bendpoint x="808" y="2987"/>    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="3"/>  
+  </realization>  
+  <generalization id="172">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="28"/>  
+  </generalization>  
+  <association id="173">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="174" name="gameManager"/>      
+      <multiplicity id="175" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="176">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="177" name="iaComPlayer"/>      
+      <multiplicity id="178" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="179">    
+    <bendpoint x="955" y="2110"/>    
+    <bendpoint x="955" y="2987"/>    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="180" name="screen"/>      
+      <multiplicity id="181" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="182">    
+    <bendpoint x="2192" y="2987"/>    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="26"/>  
+  </realization>  
+  <association id="183">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="184" name="northGamePanel"/>      
+      <multiplicity id="185" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="186">    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="28"/>  
+  </generalization>  
+  <association id="187">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="188" name="westGamePanel"/>      
+      <multiplicity id="189" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

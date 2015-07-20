@@ -1,5 +1,6 @@
 package it.unical.mat.igpe.graphics;
 import it.unical.mat.igpe.ultimateDisc.GameManager;
+import it.unical.mat.igpe.ultimateDisc.movingObject.Disc;
 import it.unical.mat.igpe.ultimateDisc.movingObject.Player;
 
 import java.awt.Color;
@@ -1197,7 +1198,7 @@ public class CenterGamePanel extends JPanel {
 //		
 //		g.drawRect((int)gameManager.getMyPlayer().getX(),(int)gameManager.getMyPlayer().getY() ,Player.getWithimage(),Player.getHeightimage());
 //
-//		g.drawRect(gameManager.getDisc().getX()+((int)(Disc.getWithimage()*0.25)),gameManager.getDisc().getY()+((int)(Disc.getHeightimage()*0.25)) ,(int)(Disc.getWithimage()*0.6), (int)(Disc.getHeightimage()*0.6));
+//		g.drawRect((int)gameManager.getDisc().getX()+((int)(Disc.getWithimage()*0.25)),(int)gameManager.getDisc().getY()+((int)(Disc.getHeightimage()*0.25)) ,(int)(Disc.getWithimage()*0.6), (int)(Disc.getHeightimage()*0.6));
 		
 		//gif goal
 //		if (CenterGamePanel.getRepainterThread().isMyPlayerGoal())

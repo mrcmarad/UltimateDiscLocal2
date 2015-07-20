@@ -6,6 +6,7 @@ import it.unical.mat.igpe.ultimaDisc.iaComPlayer.IaComPlayer;
 import it.unical.mat.igpe.ultimateDisc.movingObject.ComPlayer;
 import it.unical.mat.igpe.ultimateDisc.movingObject.Disc;
 import it.unical.mat.igpe.ultimateDisc.movingObject.MyPlayer;
+import it.unical.mat.igpe.ultimateDisc.movingObject.Player;
 import it.unical.mat.igpe.ultimateDisc.world.World;
 import it.unical.mat.igpe.ultimateDisc.world.WorldManager;
 
@@ -127,8 +128,8 @@ public class GameManager {
 	{
 		myPlayer.update();
 		world.update();
-//		if(comPlayerAbility)
-//			iaComPlayer.moveComPlayer(); 
+		if(comPlayerAbility)
+			iaComPlayer.moveComPlayer(); 
 		checkCollision();
 //		if (disc!=null && myPlayer!=null && comPlayer!=null && iaComPlayer!=null && world!=null)
 //		{
@@ -238,6 +239,16 @@ public class GameManager {
 
 	public static void setDifficultyLevel(int difficultyLevel) {
 		GameManager.difficultyLevel = difficultyLevel;
+		
+		switch(difficultyLevel)
+		{
+			case 0: IaComPlayer.setValueOfDifficulty((int)(Player.getWithimage()*0.20));
+				    break;
+			case 1: IaComPlayer.setValueOfDifficulty((int)(Player.getWithimage()*0.7));
+			        break;	
+			case 2: IaComPlayer.setValueOfDifficulty((int)(Player.getWithimage()*1.2));
+			        break;
+		}
 	}
 
 	public static boolean isEqualize() {

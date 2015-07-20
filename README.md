@@ -93,11 +93,14 @@ UPDATE 26/06/2015
 
 CODICE:
 -ok last shot  rif. GameManager timeUp()
--?	aggiungere intelligenza
+-ok	aggiungere intelligenza
 -ok	aggiustare punti 
 -ok	controllare restart ritornando al menù (problema va troppo veloce)
--?	modificare immagine lancio
+-ok modificare immagine lancio
+	bug nella parte last shot aggiustare resume!
+-ok complayer bloccare quando è al limite (movecomplayer)
 	controllata generale
+-(aggiunta audio)
 
 DOC:
 	casi d'uso

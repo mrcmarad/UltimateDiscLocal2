@@ -26,7 +26,7 @@ public abstract class Player implements MovingObject {
 	static final int dimensionEnergyShot = 7;
 	private int energyShot;
 	private final static int withImage=80;
-	private final static int heightImage=160;
+	private final static int heightImage=100;
 	private final static int speedPlayer = 17;
 	
 	public Player(double x, double y,int widthComponent, int heightComponent, int wallNorth,int wallSouth){
@@ -226,6 +226,10 @@ public abstract class Player implements MovingObject {
 
 	public static int getWithimage() {
 		return withImage;
+	}
+
+	public int getWidthComponent() {
+		return widthComponent;
 	}
 	
 

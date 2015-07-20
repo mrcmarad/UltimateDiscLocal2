@@ -4,6 +4,7 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 
 import it.unical.mat.igpe.graphics.CenterGamePanel;
+import it.unical.mat.igpe.ultimaDisc.iaComPlayer.IaComPlayer;
 import it.unical.mat.igpe.ultimateDisc.GameManager;
 import it.unical.mat.igpe.ultimateDisc.movingObject.Disc;
 import it.unical.mat.igpe.ultimateDisc.staticObject.Wall;
@@ -161,6 +162,7 @@ public class WorldImpl implements World {
 			disc.setMyplayer(false);
 			CenterGamePanel.getRepainterThread().setMyPlayerGoal(true);
 			GameManager.setStop(true);
+			IaComPlayer.resetPositionComPlayer();
 		}
 		
 	}
