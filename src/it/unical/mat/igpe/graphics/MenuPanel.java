@@ -9,6 +9,7 @@ import java.awt.event.WindowEvent;
 
 import javax.swing.JPanel;
 
+// PANEL OF MAIN MENU GAME
 public class MenuPanel extends JPanel {
 
 	private static final long serialVersionUID = 1L;

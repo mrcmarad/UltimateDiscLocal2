@@ -11,6 +11,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+// PANEL OF EAST WALL GAME PLAY
 public class EastGamePanel extends JPanel {
 
 	private static final long serialVersionUID = 1L;

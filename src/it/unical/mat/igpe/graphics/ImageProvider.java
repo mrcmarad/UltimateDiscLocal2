@@ -8,6 +8,7 @@ import java.awt.Toolkit;
 
 import javax.swing.ImageIcon;
 
+//CLASS OF IMAGE UPLOAD
 public class ImageProvider {
 	
 	// path players

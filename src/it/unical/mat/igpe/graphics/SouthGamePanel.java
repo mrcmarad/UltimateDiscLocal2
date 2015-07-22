@@ -8,6 +8,7 @@ import java.awt.Image;
 
 import javax.swing.JPanel;
 
+// PANEL SOUTH GAME (ROUND POINT)
 public class SouthGamePanel extends JPanel {
 	
 	 final class RepainterThread extends Thread

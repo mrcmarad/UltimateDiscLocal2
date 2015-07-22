@@ -9,7 +9,24 @@ import javax.sound.sampled.Clip;
 import javax.sound.sampled.DataLine;
 import javax.sound.sampled.FloatControl;
 
+// CLASS OF AUDIO UPLOAD
 public class AudioProvider {
+	
+	static Clip arena1;
+	static Clip arena2;
+	static Clip arena3;
+	static Clip pause;
+	static Clip point;
+	static Clip lastShot;
+	static Clip stopDisc;
+	static Clip shot;
+	static Clip round1;
+	static Clip round2;
+	static Clip finalRound;
+	static Clip win;
+	static Clip gameOver;
+	static Clip round;
+	static Clip musicEndMatch;
 	
 	static Clip musicMainMenu;
 	static Clip musicChooser;
@@ -45,6 +62,118 @@ public class AudioProvider {
 				musicPlay.setFramePosition(0);
 				musicPlay.start();
 				musicPlay.loop(Clip.LOOP_CONTINUOUSLY);
+				
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+	}
+	
+	public static void arena1(){
+		if(generalAudio){
+			try {
+					AudioInputStream ais = AudioSystem.getAudioInputStream(new File("audio/arena1.wav"));
+					AudioFormat af = ais.getFormat();
+					DataLine.Info info = new DataLine.Info(Clip.class, af);
+					
+					if (!AudioSystem.isLineSupported(info)) {
+						System.out.println("unsupported line");
+						System.exit(0);
+					}
+					arena1 = (Clip) AudioSystem.getLine(info);
+					arena1.open(ais);
+					
+					//controllo volume
+					FloatControl audioPlayControl = (FloatControl) arena1.getControl(FloatControl.Type.MASTER_GAIN);
+					audioPlayControl.setValue(-10.0f);
+					
+				arena1.setFramePosition(0);
+				arena1.start();
+				arena1.loop(Clip.LOOP_CONTINUOUSLY);
+				
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+	}
+	
+	public static void arena2(){
+		if(generalAudio){
+			try {
+					AudioInputStream ais = AudioSystem.getAudioInputStream(new File("audio/arena2.wav"));
+					AudioFormat af = ais.getFormat();
+					DataLine.Info info = new DataLine.Info(Clip.class, af);
+					
+					if (!AudioSystem.isLineSupported(info)) {
+						System.out.println("unsupported line");
+						System.exit(0);
+					}
+					arena2 = (Clip) AudioSystem.getLine(info);
+					arena2.open(ais);
+					
+					//controllo volume
+					FloatControl audioPlayControl = (FloatControl) arena2.getControl(FloatControl.Type.MASTER_GAIN);
+					audioPlayControl.setValue(-10.0f);
+
+				arena2.setFramePosition(0);
+				arena2.start();
+				arena2.loop(Clip.LOOP_CONTINUOUSLY);
+				
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+	}
+	
+	public static void arena3(){
+		if(generalAudio){
+			try {
+					AudioInputStream ais = AudioSystem.getAudioInputStream(new File("audio/arena3.wav"));
+					AudioFormat af = ais.getFormat();
+					DataLine.Info info = new DataLine.Info(Clip.class, af);
+					
+					if (!AudioSystem.isLineSupported(info)) {
+						System.out.println("unsupported line");
+						System.exit(0);
+					}
+					arena3 = (Clip) AudioSystem.getLine(info);
+					arena3.open(ais);
+					
+					//controllo volume
+					FloatControl audioPlayControl = (FloatControl) arena3.getControl(FloatControl.Type.MASTER_GAIN);
+					audioPlayControl.setValue(-10.0f);
+					
+				arena3.setFramePosition(0);
+				arena3.start();
+				arena3.loop(Clip.LOOP_CONTINUOUSLY);
+				
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+	}
+	
+	public static void musicEndMatch(){
+		if(generalAudio){
+			try {
+					AudioInputStream ais = AudioSystem.getAudioInputStream(new File("audio/musicEndMatch.wav"));
+					AudioFormat af = ais.getFormat();
+					DataLine.Info info = new DataLine.Info(Clip.class, af);
+					
+					if (!AudioSystem.isLineSupported(info)) {
+						System.out.println("unsupported line");
+						System.exit(0);
+					}
+					musicEndMatch = (Clip) AudioSystem.getLine(info);
+					musicEndMatch.open(ais);
+					
+					//controllo volume
+					FloatControl audioPlayControl = (FloatControl) musicEndMatch.getControl(FloatControl.Type.MASTER_GAIN);
+					audioPlayControl.setValue(-10.0f);
+					
+					musicEndMatch.setFramePosition(0);
+					musicEndMatch.start();
+					musicEndMatch.loop(Clip.LOOP_CONTINUOUSLY);
 				
 			} catch (Exception e) {
 				// TODO: handle exception
@@ -99,6 +228,43 @@ public class AudioProvider {
 		if(generalAudio){
 			try {
 				musicChooser.stop();
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+	}
+	
+	public static void stopArena1(){
+		if(generalAudio){
+			try {
+				arena1.stop();
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+	}
+	public static void stopArena2(){
+		if(generalAudio){
+			try {
+				arena2.stop();
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+	}
+	public static void stopArena3(){
+		if(generalAudio){
+			try {
+				arena3.stop();
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+	}
+	public static void stopMusicEndMatch(){
+		if(generalAudio){
+			try {
+				musicEndMatch.stop();
 			} catch (Exception e) {
 				// TODO: handle exception
 			}
@@ -174,6 +340,234 @@ public class AudioProvider {
 			}
 		}
 	}
+	
+	public static void pause(){
+		if(generalAudio){
+			try {
+				AudioInputStream ais = AudioSystem.getAudioInputStream(new File("audio/pause.wav"));
+				AudioFormat af = ais.getFormat();
+				DataLine.Info info = new DataLine.Info(Clip.class, af);
+				
+				if (!AudioSystem.isLineSupported(info)) {
+					System.out.println("unsupported line");
+					System.exit(0);
+				}
+				pause = (Clip) AudioSystem.getLine(info);
+				pause.open(ais);
+				pause.start();
+				
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+	}
+	
+	public static void point(){
+		if(generalAudio){
+			try {
+				AudioInputStream ais = AudioSystem.getAudioInputStream(new File("audio/point.wav"));
+				AudioFormat af = ais.getFormat();
+				DataLine.Info info = new DataLine.Info(Clip.class, af);
+				
+				if (!AudioSystem.isLineSupported(info)) {
+					System.out.println("unsupported line");
+					System.exit(0);
+				}
+				point = (Clip) AudioSystem.getLine(info);
+				point.open(ais);
+				point.start();
+				
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+	}
+	
+	public static void lastShot(){
+		if(generalAudio){
+			try {
+				AudioInputStream ais = AudioSystem.getAudioInputStream(new File("audio/lastShot.wav"));
+				AudioFormat af = ais.getFormat();
+				DataLine.Info info = new DataLine.Info(Clip.class, af);
+				
+				if (!AudioSystem.isLineSupported(info)) {
+					System.out.println("unsupported line");
+					System.exit(0);
+				}
+				lastShot = (Clip) AudioSystem.getLine(info);
+				lastShot.open(ais);
+				lastShot.start();
+				
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+	}
+	
+	public static void stopDisc(){
+		if(generalAudio){
+			try {
+				AudioInputStream ais = AudioSystem.getAudioInputStream(new File("audio/blocca.wav"));
+				AudioFormat af = ais.getFormat();
+				DataLine.Info info = new DataLine.Info(Clip.class, af);
+				
+				if (!AudioSystem.isLineSupported(info)) {
+					System.out.println("unsupported line");
+					System.exit(0);
+				}
+				stopDisc = (Clip) AudioSystem.getLine(info);
+				stopDisc.open(ais);
+				stopDisc.start();
+				
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+	}
+	
+	public static void shot(){
+		if(generalAudio){
+			try {
+				AudioInputStream ais = AudioSystem.getAudioInputStream(new File("audio/shot.wav"));
+				AudioFormat af = ais.getFormat();
+				DataLine.Info info = new DataLine.Info(Clip.class, af);
+				
+				if (!AudioSystem.isLineSupported(info)) {
+					System.out.println("unsupported line");
+					System.exit(0);
+				}
+				shot = (Clip) AudioSystem.getLine(info);
+				shot.open(ais);
+				shot.start();
+				
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+	}
+	
+	public static void round1(){
+		if(generalAudio){
+			try {
+				AudioInputStream ais = AudioSystem.getAudioInputStream(new File("audio/round1.wav"));
+				AudioFormat af = ais.getFormat();
+				DataLine.Info info = new DataLine.Info(Clip.class, af);
+				
+				if (!AudioSystem.isLineSupported(info)) {
+					System.out.println("unsupported line");
+					System.exit(0);
+				}
+				round1 = (Clip) AudioSystem.getLine(info);
+				round1.open(ais);
+				round1.start();
+				
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+	}
+	public static void round2(){
+		if(generalAudio){
+			try {
+				AudioInputStream ais = AudioSystem.getAudioInputStream(new File("audio/round2.wav"));
+				AudioFormat af = ais.getFormat();
+				DataLine.Info info = new DataLine.Info(Clip.class, af);
+				
+				if (!AudioSystem.isLineSupported(info)) {
+					System.out.println("unsupported line");
+					System.exit(0);
+				}
+				round2 = (Clip) AudioSystem.getLine(info);
+				round2.open(ais);
+				round2.start();
+				
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+	}
+	public static void finalRound(){
+		if(generalAudio){
+			try {
+				AudioInputStream ais = AudioSystem.getAudioInputStream(new File("audio/finalRound.wav"));
+				AudioFormat af = ais.getFormat();
+				DataLine.Info info = new DataLine.Info(Clip.class, af);
+				
+				if (!AudioSystem.isLineSupported(info)) {
+					System.out.println("unsupported line");
+					System.exit(0);
+				}
+				finalRound = (Clip) AudioSystem.getLine(info);
+				finalRound.open(ais);
+				finalRound.start();
+				
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+	}
+	public static void win(){
+		if(generalAudio){
+			try {
+				AudioInputStream ais = AudioSystem.getAudioInputStream(new File("audio/win.wav"));
+				AudioFormat af = ais.getFormat();
+				DataLine.Info info = new DataLine.Info(Clip.class, af);
+				
+				if (!AudioSystem.isLineSupported(info)) {
+					System.out.println("unsupported line");
+					System.exit(0);
+				}
+				win = (Clip) AudioSystem.getLine(info);
+				win.open(ais);
+				win.start();
+				
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+	}
+	public static void gameOver(){
+		if(generalAudio){
+			try {
+				AudioInputStream ais = AudioSystem.getAudioInputStream(new File("audio/gameOver.wav"));
+				AudioFormat af = ais.getFormat();
+				DataLine.Info info = new DataLine.Info(Clip.class, af);
+				
+				if (!AudioSystem.isLineSupported(info)) {
+					System.out.println("unsupported line");
+					System.exit(0);
+				}
+				gameOver = (Clip) AudioSystem.getLine(info);
+				gameOver.open(ais);
+				gameOver.start();
+				
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+	}
+	
+	public static void round(){
+		if(generalAudio){
+			try {
+				AudioInputStream ais = AudioSystem.getAudioInputStream(new File("audio/round.wav"));
+				AudioFormat af = ais.getFormat();
+				DataLine.Info info = new DataLine.Info(Clip.class, af);
+				
+				if (!AudioSystem.isLineSupported(info)) {
+					System.out.println("unsupported line");
+					System.exit(0);
+				}
+				round = (Clip) AudioSystem.getLine(info);
+				round.open(ais);
+				round.start();
+				
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+	}
+	
 	
 	public static void playButton(){
 		if(generalAudio){

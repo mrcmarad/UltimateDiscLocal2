@@ -6,6 +6,7 @@ import java.awt.BorderLayout;
 
 import javax.swing.JPanel;
 
+// PANEL CONTAINER OF GAME PLAY
 public class GamePanel extends JPanel {
 
 	private static final long serialVersionUID = 1L;

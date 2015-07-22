@@ -7,6 +7,7 @@ import java.awt.event.MouseListener;
 
 import javax.swing.JPanel;
 
+// PANEL OF SELECT PLAYERS GAME
 public class SelectPlayerPanel extends JPanel {
 
 	/**

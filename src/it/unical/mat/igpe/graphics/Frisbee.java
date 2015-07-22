@@ -1,11 +1,9 @@
 package it.unical.mat.igpe.graphics;
 
 
-import java.util.Random;
-
 import it.unical.mat.igpe.ultimateDisc.GameManager;
 
-
+// THREAD OF DISC UPDATE
 public class Frisbee extends Thread {
 
 	GameManager gameManager;

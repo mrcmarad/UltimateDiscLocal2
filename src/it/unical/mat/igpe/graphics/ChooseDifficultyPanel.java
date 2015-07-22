@@ -9,6 +9,7 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.JPanel;
 
+// PANEL OF DIFFICULTY SETTING
 public class ChooseDifficultyPanel extends JPanel {
 	
 	/**

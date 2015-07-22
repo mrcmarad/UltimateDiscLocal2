@@ -97,10 +97,10 @@ CODICE:
 -ok	aggiustare punti 
 -ok	controllare restart ritornando al menù (problema va troppo veloce)
 -ok modificare immagine lancio
-	bug nella parte last shot aggiustare resume!
+-ok	bug nella parte last shot aggiustare resume!
 -ok complayer bloccare quando è al limite (movecomplayer)
-	controllata generale
--(aggiunta audio)
+-ok aggiunta audio
+-ok	controllata generale
 
 DOC:
 	casi d'uso

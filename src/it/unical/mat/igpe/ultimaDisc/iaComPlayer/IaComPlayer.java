@@ -2,20 +2,21 @@ package it.unical.mat.igpe.ultimaDisc.iaComPlayer;
 
 import java.util.Random;
 
+import it.unical.mat.igpe.graphics.AudioProvider;
 import it.unical.mat.igpe.graphics.CenterGamePanel;
 import it.unical.mat.igpe.graphics.ShotComPlayer;
 import it.unical.mat.igpe.ultimateDisc.GameManager;
 import it.unical.mat.igpe.ultimateDisc.movingObject.Player;
 
+// ARTIFICIAL INTELLIGENCE 
 public class IaComPlayer {
 	
 	
 	static GameManager gameManager;
-	static int valueOfDifficulty;
+	static int valueOfDifficulty = (int)(Player.getWithimage()*0.20);
 	
-	public IaComPlayer(GameManager gameManagerNew){ //nel costruttore dovremmo passare anche la difficoltà
+	public IaComPlayer(GameManager gameManagerNew){ 
 		gameManager=gameManagerNew;
-		valueOfDifficulty = (int)(Player.getWithimage()*0.20);
 	}
 	
 	public void moveComPlayer() {
@@ -79,10 +80,12 @@ public class IaComPlayer {
 
 	public static  void shoot() {
 //		System.out.println("gameManager.getComPlayer().getX(): "+gameManager.getComPlayer().getX()+" valueOfDifficulty: "+valueOfDifficulty);
-		gameManager.getDisc().setPositionCom(gameManager.getComPlayer().getX()-(valueOfDifficulty*2), gameManager.getComPlayer().getY());
+		gameManager.getDisc().setPositionCom(gameManager.getComPlayer().getX()-(valueOfDifficulty*3), gameManager.getComPlayer().getY());
 //		gameManager.getDisc().setPositionCom(gameManager.getComPlayer().getX()-(int)(ComPlayer.getWithimage()*0.5), gameManager.getComPlayer().getY());
 		shootCom();
 		gameManager.getDisc().setAvailableForComPlayer(false);
+		
+		AudioProvider.shot();
 	}
 
 	public static void resetPositionComPlayer() {
@@ -145,59 +148,6 @@ public class IaComPlayer {
 				}
 			}
 			
-//			if((x+20)<gameManager.getComPlayer().getStartPositionX()){
-//				for (int i = 0; i < 14; i++) {
-//					gameManager.getComPlayer().setDirection(3);//RIGHT
-//					CenterGamePanel.setComPlayerImage(CenterGamePanel.getImageProvider().getComPlayerDirection(Player.RIGHT));
-//					gameManager.getComPlayer().update();
-//					try {
-//						Thread.sleep(25);
-//					} catch (InterruptedException e) {
-//						// TODO Auto-generated catch block
-//						e.printStackTrace();
-//					}
-//				}
-//			}
-//			else if((x-20)>gameManager.getComPlayer().getStartPositionX()){
-//				for (int i = 0; i < 14; i++) {
-//					gameManager.getComPlayer().setDirection(2);//LEFT
-//					CenterGamePanel.setComPlayerImage(CenterGamePanel.getImageProvider().getComPlayerDirection(Player.LEFT));
-//					gameManager.getComPlayer().update();
-//					try {
-//						Thread.sleep(25);
-//					} catch (InterruptedException e) {
-//						// TODO Auto-generated catch block
-//						e.printStackTrace();
-//					}
-//				}
-//			}
-//			if((y-20)>gameManager.getComPlayer().getStartPositionY()){
-//				for (int i = 0; i < 14; i++) {
-//					gameManager.getComPlayer().setDirection(0);//UP
-//					CenterGamePanel.setComPlayerImage(CenterGamePanel.getImageProvider().getComPlayerDirection(Player.UP));
-//					gameManager.getComPlayer().update();
-//					try {
-//						Thread.sleep(25);
-//					} catch (InterruptedException e) {
-//						// TODO Auto-generated catch block
-//						e.printStackTrace();
-//					}
-//				}
-//			}
-//			else if((y+20)<gameManager.getComPlayer().getStartPositionY()){
-//				for (int i = 0; i < 14; i++) {
-//					gameManager.getComPlayer().setDirection(1);//DOWN
-//					CenterGamePanel.setComPlayerImage(CenterGamePanel.getImageProvider().getComPlayerDirection(Player.DOWN));
-//					gameManager.getComPlayer().update();
-//					try {
-//						Thread.sleep(25);
-//					} catch (InterruptedException e) {
-//						// TODO Auto-generated catch block
-//						e.printStackTrace();
-//					}
-//				}
-//			}
-//			System.out.println("X: "+x+" y: "+y+" posX:"+gameManager.getComPlayer().getX()+" posY "+gameManager.getComPlayer().getY());
 			
 			CenterGamePanel.comPlayerImage = CenterGamePanel.imageProvider.getComPlayerLeftMotionLess();
 	}

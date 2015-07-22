@@ -1,5 +1,6 @@
 package it.unical.mat.igpe.graphics;
 
+// THREAD OF SHOT MY PLAYER
 public class Shot extends Thread {
 
 	public void run()
