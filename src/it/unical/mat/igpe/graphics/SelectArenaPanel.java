@@ -93,7 +93,6 @@ public class SelectArenaPanel extends JPanel {
 				    // play
 				    if ( (x>((int)(width*0.85))) && (x<((int)(width*0.95))) && ((y>(int)(height*0.11)) && (y<((int)(height*0.20)))))
 			    	{
-				    	CenterGamePanel.repainterThread.exitGame=false;
 			    		play = imageProvider.getPlayPushedArenaPanel();
 			    		repaint();
 			    		AudioProvider.playButton();
