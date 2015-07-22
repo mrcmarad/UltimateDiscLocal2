@@ -7,6 +7,7 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.JPanel;
 
+// PANEL OF SETTING GAME
 public class SettingPanel extends JPanel {
 	
 	/**

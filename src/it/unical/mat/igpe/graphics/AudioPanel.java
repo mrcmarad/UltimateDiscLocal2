@@ -8,6 +8,7 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.JPanel;
 
+// PANEL OF AUDIO SETTING
 public class AudioPanel extends JPanel {
 	
 	/**

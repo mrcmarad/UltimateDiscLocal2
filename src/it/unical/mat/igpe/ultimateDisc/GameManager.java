@@ -1,5 +1,6 @@
 package it.unical.mat.igpe.ultimateDisc;
 
+import it.unical.mat.igpe.graphics.AudioProvider;
 import it.unical.mat.igpe.graphics.CenterGamePanel;
 import it.unical.mat.igpe.graphics.Screen;
 import it.unical.mat.igpe.ultimaDisc.iaComPlayer.IaComPlayer;
@@ -36,6 +37,8 @@ public class GameManager {
 	static boolean stop=false;
 	
 	static boolean equalize=false;
+	
+	boolean audioStopDiscMyPlayer=false;
 		
 	public MyPlayer getMyPlayer() {
 		return myPlayer;
@@ -90,6 +93,7 @@ public class GameManager {
 		world.restart();
 		endTime=30;
 		startTime = (System.currentTimeMillis())/1000;
+		audioStopDiscMyPlayer=false;
 	}
 
 	public void stop()
@@ -131,42 +135,6 @@ public class GameManager {
 		if(comPlayerAbility)
 			iaComPlayer.moveComPlayer(); 
 		checkCollision();
-//		if (disc!=null && myPlayer!=null && comPlayer!=null && iaComPlayer!=null && world!=null)
-//		{
-//			if(pause==false)
-//			{
-//				if(timeUp() && equalize==true)
-//				{
-//					if(!stop)
-//					{
-//						disc.update();
-//						myPlayer.update();
-//						if(comPlayerAbility)
-//							iaComPlayer.moveComPlayer(); 
-//						checkCollision();
-//					}
-//				}
-//				else if(timeUp()) 
-//				{
-//					disc.reset();
-//					myPlayer.reset();
-//					comPlayer.reset();
-//					startTime=0;
-//				}
-//				else
-//				{
-//					if(!stop)
-//					{
-//						disc.update();
-//						myPlayer.update();
-//						if(comPlayerAbility)
-//							iaComPlayer.moveComPlayer(); 
-//						checkCollision();
-//					}
-//				}
-//				world.update();
-//			}
-//		}
 	}
 	
 
@@ -176,14 +144,22 @@ public class GameManager {
 
 	private void checkCollision() {
 		if(disc.getBounds().intersects(myPlayer.getBounds())){
+			if(!audioStopDiscMyPlayer)
+			{
+				AudioProvider.stopDisc();
+				audioStopDiscMyPlayer=true;
+			}
 			disc.setPosition(myPlayer.getX(), myPlayer.getY());
 		}
 		else if(disc.getBounds().intersects(comPlayer.getBounds())){
+			AudioProvider.stopDisc();
 			CenterGamePanel.comPlayerImage = CenterGamePanel.imageProvider.getComPlayerShot(14);
 			CenterGamePanel.frisbeeImage=null;
 			comPlayerAbility = false;
 			disc.setPositionCom(comPlayer.getX(), comPlayer.getY());
 			IaComPlayer.shoot();
+			
+			audioStopDiscMyPlayer=false;
 		}
 	}
 	

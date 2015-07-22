@@ -9,6 +9,7 @@ import java.util.Random;
 
 import javax.swing.JPanel;
 
+// PANEL NORTH OF GAME PLAY (TIME)
 public class NorthGamePanel extends JPanel {
 
 	 final class RepainterThread extends Thread

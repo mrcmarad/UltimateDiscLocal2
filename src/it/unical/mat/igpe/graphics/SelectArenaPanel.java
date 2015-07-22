@@ -8,6 +8,7 @@ import java.awt.event.MouseListener;
 
 import javax.swing.JPanel;
 
+// PANEL OF SELECT PLAYGROUND GAME
 public class SelectArenaPanel extends JPanel {
 
 	/**
@@ -60,9 +61,19 @@ public class SelectArenaPanel extends JPanel {
 			    		mainFrame.startGame(SelectArenaPanel.myPlayer,SelectArenaPanel.comPlayer,SelectArenaPanel.select);
 				    	CenterGamePanel.getRepainterThread().setFinishMatch(false);
 				    	CenterGamePanel.getRepainterThread().setStartGame(true);
-				    	select=0;
 				    	AudioProvider.stopMusicChooser();
-				    	AudioProvider.musicPlay();
+				    	switch(select)
+				    	{
+				    	 case 0: AudioProvider.arena1();
+				    	 		 break;
+				    	 case 1: AudioProvider.arena2();
+		    	 		 		 break;
+				    	 case 2: AudioProvider.arena3();
+		    	 		 		 break;
+				    	 default : AudioProvider.arena1();
+		    	 		 		   break;
+				    	}
+				    	select=0;
 			    	}
 				}
 				
@@ -82,6 +93,7 @@ public class SelectArenaPanel extends JPanel {
 				    // play
 				    if ( (x>((int)(width*0.85))) && (x<((int)(width*0.95))) && ((y>(int)(height*0.11)) && (y<((int)(height*0.20)))))
 			    	{
+				    	CenterGamePanel.repainterThread.exitGame=false;
 			    		play = imageProvider.getPlayPushedArenaPanel();
 			    		repaint();
 			    		AudioProvider.playButton();

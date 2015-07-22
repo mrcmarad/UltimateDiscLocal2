@@ -10,9 +10,8 @@ import java.awt.Toolkit;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
 
+// MAIN FRAME CLASS
 public class MainFrame extends JFrame {
 
 	/**
@@ -53,10 +52,6 @@ public class MainFrame extends JFrame {
 	
 	public MainFrame(GameManager gameManager,ImageProvider imageProvider)
 	{
-		//////////////////////////////////////////////////////////////////////
-		 AudioProvider.clickAudio();
-    	 AudioProvider.audioOff();
-    	//////////////////////////////////////////////////////////////////////
 		AudioProvider.musicMainMenu();
 		
 		this.imageProvider=imageProvider;
@@ -74,13 +69,6 @@ public class MainFrame extends JFrame {
 		this.setUndecorated(true);
 		this.setVisible(true);
 		
-		try {
-            UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
-
-            ProgressPainter painter = new ProgressPainter(Color.WHITE, Color.RED);
-            UIManager.getLookAndFeelDefaults().put("ProgressBar[Enabled+Finished].foregroundPainter", painter);
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
-        }
 	}
 	
 	public void startGame(int myPlayer,int comPlayer,int playGround)

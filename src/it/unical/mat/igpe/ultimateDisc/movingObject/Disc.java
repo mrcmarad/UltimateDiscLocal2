@@ -1,7 +1,6 @@
 package it.unical.mat.igpe.ultimateDisc.movingObject;
 import it.unical.mat.igpe.graphics.CenterGamePanel;
 import it.unical.mat.igpe.graphics.Screen;
-import it.unical.mat.igpe.ultimateDisc.GameManager;
 
 import java.awt.Rectangle;
 

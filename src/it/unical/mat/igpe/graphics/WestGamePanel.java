@@ -11,6 +11,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+//PANEL OF WEST WALL GAME PLAY
 public class WestGamePanel extends JPanel {
 
 	 

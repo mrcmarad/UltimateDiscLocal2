@@ -12,7 +12,7 @@ import java.awt.event.KeyEvent;
 import java.util.Hashtable;
 import java.util.Map;
 
-
+// CLASS OF KEY STATE
 class KeyProcessor extends javax.swing.Timer {
 
     /**

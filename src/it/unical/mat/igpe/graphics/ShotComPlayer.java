@@ -2,6 +2,7 @@ package it.unical.mat.igpe.graphics;
 
 import it.unical.mat.igpe.ultimaDisc.iaComPlayer.IaComPlayer;
 
+// THREAD OF SHOT COM PLAYER
 public class ShotComPlayer extends Thread {
 
 	public void run()

@@ -3,6 +3,7 @@ package it.unical.mat.igpe.graphics;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 
+// CLASS SUPPORT OF SCREEN
 public class Screen {
 
 	private static Screen instance = null;
